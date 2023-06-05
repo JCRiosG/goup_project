@@ -19,7 +19,7 @@ class _ClientMapPageState extends State<ClientMapPage>{
   void initState(){
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
-      _con.init(context);
+      _con.init(context, refresh);
     });
   }
 
@@ -40,8 +40,8 @@ class _ClientMapPageState extends State<ClientMapPage>{
                     _btnCenterPosition()
                   ],
                 ),
-                Expanded(child: Container()),
-                _btnConect(),
+                /*Expanded(child: Container()),
+                _btnConect(),*/
               ],
             ),
           )
@@ -50,14 +50,24 @@ class _ClientMapPageState extends State<ClientMapPage>{
     );
   }
   //@22.460685,-97.9702712,15z
+
+
   Widget _googleMapsWidget(){
     return GoogleMap(
       mapType: MapType.normal,
       initialCameraPosition: _con.initialPosition,
       onMapCreated: _con.onMapCreated,
-      myLocationEnabled: true,
+      myLocationEnabled: false,
+      myLocationButtonEnabled: false,
+      markers: Set<Marker>.of(_con.markers.values),
     );
   }
+  void refresh(){
+    setState(() {
+
+    });
+  }
+
   Widget _btnCenterPosition(){
     return Container(
       alignment: Alignment.centerRight,
