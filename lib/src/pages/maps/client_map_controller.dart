@@ -26,7 +26,7 @@ class ClientMapController{
   Future init(BuildContext context, Function refresh) async {
     this.context = context;
     this.refresh = refresh;
-    markerClient = await createMarkerImageFromAsset('assets/images/person-icon.png');
+    markerClient = await createMarkerImageFromAsset('assets/images/person1-icon.png');
     checkGPS();
   }
 
