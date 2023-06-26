@@ -3,17 +3,17 @@ import 'package:flutter/scheduler.dart';
 import 'package:go_up/src/widgets/button_app.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:go_up/src/utils/colors.dart' as UtilsColors;
-import 'package:go_up/src/pages/maps/client_map_controller.dart';
+import 'package:go_up/src/pages/maps/driver_map_controller.dart';
 
-class ClientMapPage extends StatefulWidget{
+class DriverMapPage extends StatefulWidget{
   @override
-  _ClientMapPageState createState() => _ClientMapPageState();
+  _DriverMapPageState createState() => _DriverMapPageState();
 
 }
 
-class _ClientMapPageState extends State<ClientMapPage>{
+class _DriverMapPageState extends State<DriverMapPage>{
 
-  ClientMapController _con = new ClientMapController();
+  DriverMapController _con = new DriverMapController();
 
   @override
   void initState(){
@@ -40,8 +40,8 @@ class _ClientMapPageState extends State<ClientMapPage>{
                     _btnCenterPosition()
                   ],
                 ),
-                /*Expanded(child: Container()),
-                _btnConect(),*/
+                Expanded(child: Container()),
+                _btnConect(),
               ],
             ),
           )
@@ -74,7 +74,7 @@ class _ClientMapPageState extends State<ClientMapPage>{
       margin:EdgeInsets.symmetric(horizontal: 10),
       child: Card(
         shape: CircleBorder(),
-        color: UtilsColors.Colors.appColorNaranja,
+        color: Colors.white,
         elevation: 4.0,
         child: Container(
           padding: EdgeInsets.all(10),

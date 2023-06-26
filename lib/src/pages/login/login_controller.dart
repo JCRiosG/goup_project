@@ -29,8 +29,15 @@ class LoginController{
     _progressDialog = MyProgressDialog.createProgressDialog(context, 'Cargando...')!;
     _sharedPref = SharedPref();
     _typeUser= await _sharedPref!.read('typeUser');
-    print('============ TIPO DE USUARIO ============');
-    print(_typeUser);
+    //print('============ TIPO DE USUARIO ============');
+    //print(_typeUser);
+    if(_typeUser == 'driver'){
+      Navigator.pushNamed(context!, 'mapConductor');
+    }
+    if(_typeUser == 'user'){
+      Navigator.pushNamed(context!, 'mapCliente');
+    }
+
     return null;
   }
 

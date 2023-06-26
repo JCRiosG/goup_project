@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:go_up/src/pages/home/home_controller.dart';
 import 'package:go_up/src/utils/colors.dart' as utils;

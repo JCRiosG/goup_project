@@ -5,7 +5,7 @@ class HomeController{
   BuildContext? context;
   SharedPref? _sharedPref;
 
-  Future? init(BuildContext context){
+  Future? init(BuildContext context) async {
     this.context = context;
     _sharedPref = SharedPref();
   }

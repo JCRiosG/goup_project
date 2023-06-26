@@ -5,6 +5,7 @@ import 'package:go_up/src/pages/login/login_page.dart';
 import 'package:go_up/src/pages/maps/maps_page.dart';
 import 'package:go_up/src/pages/register/client_register_page.dart';
 import 'package:go_up/src/pages/register/driver_register_page.dart';
+import 'package:go_up/src/pages/maps/driver_map_page.dart';
 import 'package:go_up/src/pages/maps/client_map_page.dart';
 import 'package:go_up/src/utils/colors.dart' as utils;
 
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GO UP',
-      initialRoute: 'mapCliente',
+      initialRoute: 'home',
       theme: ThemeData(
         fontFamily: 'Anton',
         appBarTheme: const AppBarTheme(
@@ -40,6 +41,7 @@ class _MyAppState extends State<MyApp> {
         'client_register':(BuildContext context) => ClientRegisterPage(),
         'driver_register':(BuildContext context) => DriverRegisterPage(),
         'maps':(BuildContext context) => mapWebViewApp(),
+        'mapConductor':(BuildContext context) => DriverMapPage(),
         'mapCliente':(BuildContext context) => ClientMapPage()
       },
     );
